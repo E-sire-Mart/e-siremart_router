@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    { "source": "/user/:path*", "destination": "https://e-sirefront-end-web.vercel.app/:path*" },
+    { "source": "/vendor/:path*", "destination": "https://vendor-side.vercel.app/:path*" },
+    { "source": "/admin/:path*", "destination": "https://new-admin-brown.vercel.app/:path*" },
+    { "source": "/api/:path*", "destination": "https://esirebackend.onrender.com/:path*" }
+  ]
+}
