@@ -17,13 +17,6 @@
       "destination": "https://esirebackend.onrender.com/:path*"
     }
   ],
-  "redirects": [
-    {
-      "source": "/",
-      "destination": "/user",
-      "permanent": true
-    }
-  ],
   "headers": [
     {
       "source": "/(.*)",

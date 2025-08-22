@@ -1,6 +1,6 @@
 # E-Siremart Router
 
-This is a Next.js application that serves as a router for the E-Siremart platform, providing unified access to three different applications:
+This is a simple HTML-based router for the E-Siremart platform, providing unified access to three different applications:
 
 - **User Portal**: `/user` - Customer-facing e-commerce application
 - **Vendor Portal**: `/vendor` - Vendor management application  
@@ -16,32 +16,25 @@ e-siremart.com/
 └── /api      → esirebackend.onrender.com
 ```
 
-## Local Development
+## How It Works
 
-1. Install dependencies:
-```bash
-npm install
-# or
-yarn install
-```
+This router uses a simple HTML page with Vercel's rewrite rules to:
 
-2. Run the development server:
-```bash
-npm run dev
-# or
-yarn dev
-```
+1. **Serve a landing page** at the root domain (`e-siremart.com`)
+2. **Route traffic** to the appropriate applications using Vercel rewrites
+3. **Avoid Vercel verification pages** by using static HTML instead of Next.js
 
-3. Open [http://localhost:3000](http://localhost:3000) in your browser.
+## Files
+
+- `index.html` - The main landing page with portal links
+- `vercel.json` - Vercel configuration with rewrite rules
+- `README.md` - This documentation
 
 ## Deployment to Vercel
 
 1. Push your code to GitHub
 2. Connect your repository to Vercel
-3. Set the following environment variables in Vercel:
-   - `NODE_ENV=production`
-
-4. Deploy the application
+3. Deploy the application
 
 ## Domain Configuration
 
@@ -57,10 +50,6 @@ Configure your DNS settings in Hostinger with the following records:
    - Name: `www`
    - Value: `your-vercel-app.vercel.app`
 
-3. **Additional A Records** (if needed):
-   - Name: `@`
-   - Value: `76.76.19.19`
-
 ### Vercel Domain Configuration
 
 1. Go to your Vercel dashboard
@@ -68,7 +57,22 @@ Configure your DNS settings in Hostinger with the following records:
 3. Go to Settings → Domains
 4. Add your custom domain: `e-siremart.com`
 5. Add `www.e-siremart.com` as well
-6. Configure SSL certificate (automatic with Vercel)
+
+## Features
+
+- **Clean landing page** with portal selection
+- **Auto-redirect** to user portal after 3 seconds
+- **Responsive design** for mobile and desktop
+- **No framework dependencies** - pure HTML/CSS/JS
+- **Fast loading** - no build process required
+
+## Testing Routes
+
+- Main Site: `https://e-siremart.com`
+- User Portal: `https://e-siremart.com/user`
+- Vendor Portal: `https://e-siremart.com/vendor`
+- Admin Portal: `https://e-siremart.com/admin`
+- API: `https://e-siremart.com/api`
 
 ## Troubleshooting
 
@@ -77,13 +81,6 @@ Configure your DNS settings in Hostinger with the following records:
 1. **Domain not loading**: Check DNS propagation (can take up to 48 hours)
 2. **Routing not working**: Verify the destination URLs in `vercel.json`
 3. **SSL issues**: Ensure SSL is enabled in Vercel
-
-### Testing Routes
-
-- User Portal: `https://e-siremart.com/user`
-- Vendor Portal: `https://e-siremart.com/vendor`
-- Admin Portal: `https://e-siremart.com/admin`
-- API: `https://e-siremart.com/api`
 
 ## Security Considerations
 
