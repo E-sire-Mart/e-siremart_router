@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/user/:path*",
-      "destination": "https://e-sirefront-end-ou6d3gpgk-mykolas-projects-fd645fac.vercel.app/:path*"
+      "destination": "https://e-sirefront-end-web.vercel.app/:path*"
     },
     {
       "source": "/vendor/:path*",
