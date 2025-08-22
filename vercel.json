@@ -1,24 +1,46 @@
 {
-    "rewrites": [
-      {
-        "source": "/user/:path*",
-        "destination": "https://e-sirefront-end-web.vercel.app/:path*"
-      },
-      {
-        "source": "/vendor/:path*",
-        "destination": "https://vendor-side.vercel.app/:path*"
-      },
-      {
-        "source": "/admin/:path*",
-        "destination": "https://new-admin-brown.vercel.app/:path*"
-      },
-      {
-        "source": "/api/:path*",
-        "destination": "https://esirebackend.onrender.com/:path*"
-      },
-      {
-        "source": "/",
-        "destination": "/user"
-      }
-    ]
-  }
+  "rewrites": [
+    {
+      "source": "/user/:path*",
+      "destination": "https://e-sirefront-end-ou6d3gpgk-mykolas-projects-fd645fac.vercel.app/:path*"
+    },
+    {
+      "source": "/vendor/:path*",
+      "destination": "https://vendor-side.vercel.app/:path*"
+    },
+    {
+      "source": "/admin/:path*",
+      "destination": "https://new-admin-brown.vercel.app/:path*"
+    },
+    {
+      "source": "/api/:path*",
+      "destination": "https://esirebackend.onrender.com/:path*"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/user",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    }
+  ]
+}
