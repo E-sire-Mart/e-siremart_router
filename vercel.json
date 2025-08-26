@@ -1,8 +1,12 @@
 {
   "rewrites": [
     {
-      "source": "/user/:path*",
-      "destination": "https://e-sirefront-end-web.vercel.app/:path*"
+      "source": "/",
+      "destination": "https://e-sirefront-end-ou6d3gpgk-mykolas-projects-fd645fac.vercel.app/"
+    },
+    {
+      "source": "/:path*",
+      "destination": "https://e-sirefront-end-ou6d3gpgk-mykolas-projects-fd645fac.vercel.app/:path*"
     },
     {
       "source": "/vendor/:path*",
@@ -15,6 +19,10 @@
     {
       "source": "/api/:path*",
       "destination": "https://esirebackend.onrender.com/:path*"
+    },
+    {
+      "source": "/uploads/:path*",
+      "destination": "https://esirebackend.onrender.com/uploads/:path*"
     }
   ],
   "headers": [
